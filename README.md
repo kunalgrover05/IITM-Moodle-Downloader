@@ -3,7 +3,9 @@ IITM-Moodle-Downloader
 
 Downloads course content from IITM-Moodle  
 Uses BeautifulSoup library
-Copy moodle-downloader.py and bs4 folder to a new folder. Script makes subject wise folders.  
+Copy moodle-downloader.py and bs4 folder to a new folder.  
+Script makes subject wise folders.  
+Saves new files every time it is run.    
 
 <h5>Open moodle-downloader.py and edit:</h5>
 * username -> Login ID 
