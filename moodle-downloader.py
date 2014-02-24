@@ -14,10 +14,14 @@ def save_file( data, filename ) :
     global i
     global directory
     
-    filename = directory + "\\" + filename
-    filename = urllib.unquote( filename )
-    tempfile = directory + "\\temp"
-    
+    if os.name == 'posix':
+        filename = directory + "/" + filename
+        tempfile = directory + "/temp"
+    else :
+        filename = directory + "\\" + filename
+        tempfile = directory + "\\temp"
+
+    filename = urllib.unquote( filename )    
     if not os.path.exists( directory ) :
         os.makedirs( directory )
 
@@ -66,7 +70,7 @@ if __name__ == "__main__":
     username = ""
     password = ""
 
-    os.chdir(os.path.dirname(sys.argv[0]))
+    os.chdir(os.path.dirname(os.path.abspath((sys.argv[0]))))
     
     req = auth( username, password )
     resp = urllib2.urlopen( req )
