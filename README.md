@@ -11,7 +11,9 @@ Open moodle-downloader.py and edit:
 * username -> Login ID 
 * password -> Login password
 * subjects -> Your course codes separated by commas
-* year -> Specify year for course content  
+* year -> Specify year for course content
+  
+Run using python moodle-downloader.py  
 
 <h5>Dependencies:</h5>
 * Python
